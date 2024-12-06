@@ -7,6 +7,7 @@ $color-text-light: #667479;
 * {
   font-family: "Be Vietnam Pro", sans-serif;
   box-sizing: border-box;
+  overflow-x: hidden; 
 }
 
 body {
@@ -1048,6 +1049,80 @@ img {
   }
 }
 // End Box Share
+
+
+/* feedback */
+
+.feedback{
+  padding: 20px 130px;
+
+  h2{
+    color:$color-primary;
+    font-weight: 700;
+    size: 24px;
+  }
+
+  &__customer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 12px;
+
+    img {
+      margin-top:12px ;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  &__bar ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    li{
+      margin: 0 6px;
+      width: 9px;
+      height: 9px;  
+      background-color: #003459;
+      border-radius: 7.5px;
+     
+    }
+    li:nth-child(2),
+    li:nth-child(3),
+    li:nth-child(4),
+    li:nth-child(5) {
+      background-color: #CCD1D2;
+    }
+  }
+
+  @media(max-width:991.98px){
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    img {
+      width: 100%;
+      object-fit:cover ;
+    }
+  
+  }
+
+  @media(max-width: 767.98px){
+    width: 100%;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    img {
+      width: 100%;
+      object-fit:cover ;
+    }
+  }
+
+}
+
+/* end feedback */ 
+
+
 /* Footer */
 .footer {
   border-radius: 40px 40px 0 0;
@@ -1176,126 +1251,127 @@ img {
     li a {
       font-weight: 500;
       font-size: 14px;
-      color: var(--color-text-light);
+      color: $color-text-light;
     }
     
   }
 
   @media (max-width: 991.98px) {
-  .footer {
     padding-top: 40px;
-  }
 
-  .footer .inner-top {
+  &__top {
     flex-wrap: wrap;
   }
 
-  .footer .inner-top .inner-title {
+  &__title {
     width: 100%;
   }
 
-  .footer .inner-middle {
+  &__middle {
     flex-wrap: wrap;
+
+   
   }
 
-  .footer .inner-middle .inner-links {
+  &__links {
     width: 100%;
     margin-bottom: 20px;
+
+    ul {
+      justify-content: space-between;
+    }
   }
 
-  .footer .inner-middle .inner-links ul {
-    justify-content: center;
-  }
 
-  .footer .inner-middle .inner-socials {
+
+  &__socials {
     width: 100%;
+
+    ul {
+      justify-content: center;
+    }
   }
 
-  .footer .inner-middle .inner-socials ul {
-    justify-content: center;
-  }
-
-  .footer .inner-bottom {
+  &__bottom {
     flex-wrap: wrap;
+
+    &__copyright {
+      width: 100%;
+      order: 2;
+      text-align: center;
+    }
+
+    &__logo {
+      width: 100%;
+      margin-bottom: 32px;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    
+
+    &__links {
+      width: 100%;
+      order: 1;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      justify-content: center;
+    }
   }
 
-  .footer .inner-bottom .inner-copyright {
-    width: 100%;
-    order: 2;
-    text-align: center;
-  }
-
-  .footer .inner-bottom .inner-logo {
-    width: 100%;
-    margin-bottom: 32px;
-  }
-
-  .footer .inner-bottom .inner-logo img {
-    margin: 0 auto;
-  }
-
-  .footer .inner-bottom .inner-links {
-    width: 100%;
-    order: 1;
-    margin-bottom: 12px;
-  }
-
-  .footer .inner-bottom .inner-links ul {
-    justify-content: center;
-  }
 }
 
 @media (max-width: 575.98px) {
-  .footer {
     border-radius: 20px 20px 0 0;
     padding-bottom: 16px;
-  }
+  
 
-  .footer .inner-top {
+  &__top {
     padding: 16px;
     gap: 16px;
+
+    &__form {
+      flex-wrap: wrap;
+    }
   }
 
-  .footer .inner-top .inner-form {
-    flex-wrap: wrap;
-  }
-
-  .footer .inner-top .inner-form button {
+  &__form button {
     width: 100%;
   }
 
-  .footer .inner-middle .inner-links ul {
+  &__links ul {
     gap: 5px 40px;
   }
 
-  .footer .inner-middle .inner-links ul li a {
+  &__links ul li a {
     font-size: 13px;
   }
 
-  .footer .inner-middle .inner-socials ul li a {
+  &__socials ul li a {
     font-size: 20px;
   }
 
-  .footer .inner-bottom {
+  &__bottom {
     margin-top: 36px;
   }
 
-  .footer .inner-bottom .inner-links ul {
+  &__links ul {
     gap: 5px 15px;
   }
 
-  .footer .inner-bottom .inner-links ul li a {
+  &__links ul li a {
     font-size: 12px;
   }
 
-  .footer .inner-bottom .inner-copyright {
+  &__copyright {
     font-size: 10px;
   }
 }
 }
-
-
-
 
 /* End Footer */
 

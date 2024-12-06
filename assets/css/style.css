@@ -3,6 +3,7 @@
 * {
   font-family: "Be Vietnam Pro", sans-serif;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -892,6 +893,69 @@ img {
   color: #667479;
 }
 
+/* feedback */
+.feedback {
+  padding: 20px 130px;
+}
+.feedback h2 {
+  color: #003459;
+  font-weight: 700;
+  size: 24px;
+}
+.feedback__customer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.feedback__customer img {
+  margin-top: 12px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.feedback__bar ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+.feedback__bar ul li {
+  margin: 0 6px;
+  width: 9px;
+  height: 9px;
+  background-color: #003459;
+  border-radius: 7.5px;
+}
+.feedback__bar ul li:nth-child(2),
+.feedback__bar ul li:nth-child(3),
+.feedback__bar ul li:nth-child(4),
+.feedback__bar ul li:nth-child(5) {
+  background-color: #CCD1D2;
+}
+@media (max-width: 991.98px) {
+  .feedback {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .feedback img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@media (max-width: 767.98px) {
+  .feedback {
+    width: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .feedback img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* end feedback */
 /* Footer */
 .footer {
   border-radius: 40px 40px 0 0;
@@ -1006,92 +1070,92 @@ img {
 .footer__links ul li a {
   font-weight: 500;
   font-size: 14px;
-  color: var(--color-text-light);
+  color: #667479;
 }
 @media (max-width: 991.98px) {
-  .footer .footer {
+  .footer {
     padding-top: 40px;
   }
-  .footer .footer .inner-top {
+  .footer__top {
     flex-wrap: wrap;
   }
-  .footer .footer .inner-top .inner-title {
+  .footer__title {
     width: 100%;
   }
-  .footer .footer .inner-middle {
+  .footer__middle {
     flex-wrap: wrap;
   }
-  .footer .footer .inner-middle .inner-links {
+  .footer__links {
     width: 100%;
     margin-bottom: 20px;
   }
-  .footer .footer .inner-middle .inner-links ul {
-    justify-content: center;
+  .footer__links ul {
+    justify-content: space-between;
   }
-  .footer .footer .inner-middle .inner-socials {
+  .footer__socials {
     width: 100%;
   }
-  .footer .footer .inner-middle .inner-socials ul {
+  .footer__socials ul {
     justify-content: center;
   }
-  .footer .footer .inner-bottom {
+  .footer__bottom {
     flex-wrap: wrap;
   }
-  .footer .footer .inner-bottom .inner-copyright {
+  .footer__bottom__copyright {
     width: 100%;
     order: 2;
     text-align: center;
   }
-  .footer .footer .inner-bottom .inner-logo {
+  .footer__bottom__logo {
     width: 100%;
     margin-bottom: 32px;
   }
-  .footer .footer .inner-bottom .inner-logo img {
+  .footer__bottom__logo img {
     margin: 0 auto;
   }
-  .footer .footer .inner-bottom .inner-links {
+  .footer__bottom__links {
     width: 100%;
     order: 1;
     margin-bottom: 12px;
   }
-  .footer .footer .inner-bottom .inner-links ul {
+  .footer__bottom ul {
     justify-content: center;
   }
 }
 @media (max-width: 575.98px) {
-  .footer .footer {
+  .footer {
     border-radius: 20px 20px 0 0;
     padding-bottom: 16px;
   }
-  .footer .footer .inner-top {
+  .footer__top {
     padding: 16px;
     gap: 16px;
   }
-  .footer .footer .inner-top .inner-form {
+  .footer__top__form {
     flex-wrap: wrap;
   }
-  .footer .footer .inner-top .inner-form button {
+  .footer__form button {
     width: 100%;
   }
-  .footer .footer .inner-middle .inner-links ul {
+  .footer__links ul {
     gap: 5px 40px;
   }
-  .footer .footer .inner-middle .inner-links ul li a {
+  .footer__links ul li a {
     font-size: 13px;
   }
-  .footer .footer .inner-middle .inner-socials ul li a {
+  .footer__socials ul li a {
     font-size: 20px;
   }
-  .footer .footer .inner-bottom {
+  .footer__bottom {
     margin-top: 36px;
   }
-  .footer .footer .inner-bottom .inner-links ul {
+  .footer__links ul {
     gap: 5px 15px;
   }
-  .footer .footer .inner-bottom .inner-links ul li a {
+  .footer__links ul li a {
     font-size: 12px;
   }
-  .footer .footer .inner-bottom .inner-copyright {
+  .footer__copyright {
     font-size: 10px;
   }
 }
